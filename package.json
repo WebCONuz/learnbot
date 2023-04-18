@@ -1,0 +1,19 @@
+{
+  "name": "firstbot",
+  "version": "1.0.0",
+  "description": "Learn to build bot by telegram-bot-api package",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "telegram bot",
+    "js"
+  ],
+  "author": "Toshtemirov M",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
