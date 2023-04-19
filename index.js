@@ -17,18 +17,23 @@ const chatId = 1251901085;
         reply_markup: {
           one_time_keyboard: true,
           resize_keyboard: true,
+          inline_keyboard: [
+            [
+              {
+                text: "inline button",
+                url: "https://youtube.com",
+              },
+            ],
+          ],
           keyboard: [
             [
               {
-                text: "1-knopka",
+                text: "Location",
+                request_location: true,
               },
               {
-                text: "2-knopka",
-              },
-            ],
-            [
-              {
-                text: "3-knopka",
+                text: "Contact",
+                request_contact: true,
               },
             ],
           ],
