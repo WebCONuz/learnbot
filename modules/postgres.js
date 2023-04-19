@@ -8,7 +8,7 @@ async function postgres() {
   try {
     let db = {};
     db.users = await Models.UserModel(Sequelize, sequelize);
-    await sequelize.sync({ force: true });
+    await sequelize.sync({ force: false });
 
     return db;
   } catch (error) {

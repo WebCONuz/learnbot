@@ -12,5 +12,8 @@ async function main() {
   await bot.on("text", (message) =>
     Controllers.MessageController(message, bot, psql)
   );
+  await bot.on("contact", async (message) =>
+    Controllers.ContactController(message, bot, psql)
+  );
 }
 main();

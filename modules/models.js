@@ -9,6 +9,14 @@ module.exports = class Models {
         type: Sequelize.DataTypes.SMALLINT,
         defaultValue: 1,
       },
+      user_name: {
+        type: Sequelize.DataTypes.STRING(40),
+        allowNull: true,
+      },
+      user_phone: {
+        type: Sequelize.DataTypes.STRING(13),
+        allowNull: true,
+      },
     });
   }
 };
