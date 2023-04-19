@@ -17,6 +17,10 @@
     "nodemon": "^2.0.22"
   },
   "dependencies": {
-    "node-telegram-bot-api": "^0.61.0"
+    "dotenv": "^16.0.3",
+    "generate-password": "^1.7.0",
+    "node-telegram-bot-api": "^0.61.0",
+    "pg": "^8.10.0",
+    "sequelize": "^6.31.0"
   }
 }

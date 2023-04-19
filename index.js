@@ -1,13 +1,16 @@
-const TOKEN = "5839830044:AAH6_Ms3iae_ZL99_7U4QFvFKweTOoRlQTE";
 const chatId = 1251901085;
 
 const TelegramBot = require("node-telegram-bot-api");
 const Controllers = require("./controllers");
+const { TOKEN, OPTIONS } = require("./config");
+const postgres = require("./modules/postgres");
 
-const options = {
-  polling: true,
-};
+const bot = new TelegramBot(TOKEN, OPTIONS);
 
-const bot = new TelegramBot(TOKEN, options);
-bot.on("text", (message) => Controllers.MessageController(message, bot));
-bot.getMe().then((info) => console.log(info));
+async function main() {
+  const psql = await postgres();
+  await bot.on("text", (message) =>
+    Controllers.MessageController(message, bot, psql)
+  );
+}
+main();
